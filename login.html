@@ -1,4 +1,5 @@
 <html> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style> 
     input[type=text], 
     input[type=password] { 
@@ -42,7 +43,20 @@
      
 </style> 
 <body style="background-color:#566573"> 
-    <form action="music.html">
+    <form name=F1 onSubmit="return dil(this)" action="music.html" >
+				   <table cellspacing="10" cellpadding="8">	
+				
+				  <tr><td>LOGIN NAME:</td><td> <input type="text" name="username"/></td></tr>
+					
+					<tr><td>PASSWORD:</td><td> <input type="password" name="password"/></td></tr>
+					
+					<tr><td></td><td><input type="submit" value="Submit"/>
+					
+                   
+                   <INPUT TYPE=RESET VALUE="CLEAR"></td></tr>
+                    <tr><td><a href="forgotpass.html">forgot password?</a></td></tr>
+                   <tr><td><a href="Register.html">New User</a></td></tr>
+             	</table>
         <div class="container"> 
             <table style="height: 189px; width: 606px;" align="center">
                 <tr><div class="imgcontainer">
