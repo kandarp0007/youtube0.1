@@ -1,63 +1,33 @@
-<html> 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<style> 
-    input[type=text], 
-    input[type=password] { 
-        width: 100%; 
-        padding: 12px 20px; 
-        margin: 8px 0; 
-        display: inline-block; 
-        border: 1px solid #ccc; 
-        box-sizing: border-box; 
-    } 
-    button { 
-        background-color: #4CAF50; 
-        color: white; 
-        padding: 14px 20px; 
-        margin: 8px 0; 
-        border: none; 
-        cursor: pointer; 
-        width: 100%; 
-    } 
-    button:hover { 
-        opacity: 0.8; 
-    } 
-    .cancelbtn { 
-        background-color: #f44336;
-        color: white; 
-        padding: 14px 20px; 
-        height: 44;
-        width:213; 
-    } 
-    .imgcontainer { 
-        text-align: center; 
-        margin: 50px 0 50px 0; 
-    }       
-    img.avatar { 
-        width: 30%; 
-        /*border-radius: 50%;*/ 
-    } 
-    .container { 
-        padding: 5px; 
-    } 
-     
-</style> 
+<html>
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="login.css">
+    </head>
 <body style="background-color:#566573"> 
-    <form action="music.html" >
-        <div class="container"> 
-            <table style="height: 189px; width: 606px;" align="center">
-                <tr><div class="imgcontainer">
-                    <img src="logo.jpg" alt="Avatar" class="avatar">
-                    </div> 
-                </tr>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="sidelogo.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          YouTube
+        </a>
+        <div class="topnav">
+            <a href="login.html">LOGIN</a> 
+            <a href="/css/">REGISTER</a> 
+            <a href="/js/">ABOUT US</a> 
+            <a href="/python/">CONTACT US</a>
+        </div>
+    </nav>
+    <form action="music.html">
+        <div class="container">
+            <table class="table_body">
+                <tbody align="center">
                 <tr>
-                    <td style="width: 209px;"><label><b>Username</b></label> </td>
-                    <td style="width: 381px;"><input type="text" placeholder="Enter Username" name="uname" required> 
+                    <td><label><b>Username</b></label> </td>
+                    <td><input type="text" placeholder="Enter Username" name="uname" required> 
                     </td>
                 </tr>
                 <tr>
-                    <td style="width: 209px;"><label><b>Password</b></label> </td>
-                    <td style="width: 381px;"><input type="password" placeholder="Enter Password" name="psw" required> </td>
+                    <td><label><b>Password</b></label> </td>
+                    <td><input type="password" placeholder="Enter Password" name="psw" required> </td>
                 </tr>
                 <tr>
                     <td>
@@ -71,8 +41,9 @@
                     <td><input type="checkbox" checked="checked"> Remember me 
                     </td>
                 </tr>
+                </tbody>
             </table>
-        </div> 
+            </div>
     </form>
 </body> 
 </html> 
