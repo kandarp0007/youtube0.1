@@ -1,71 +1,60 @@
 
 <html>
+<head>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="music.css">
+</head>
 <body>
-<div>
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
+<nav class="navbar navbar-light bg-light">
+	<a class="navbar-brand" href="#">
+	  <img src="sidelogo.jpg" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+	  MUSIC
+	</a>
+	<div class="topnav">
+		<a href="login.html">LOGIN</a> 
+        <a href="/css/">REGISTER</a> 
+        <a href="/js/">ABOUT US</a> 
+        <a href="/python/">CONTACT US</a>
+	</div>
+</nav>
 <table>
 <tr>
-<td><div>
-  <video width="420" height="315" controls>
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).mp4" type="video/mp4">
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-</div></td>
-<td>
-<div>
-  <video width="420" height="315" controls>
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).mp4" type="video/mp4">
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-</div>
-</td>
-<td><div>
-  <video width="420" height="315" controls>
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).mp4" type="video/mp4">
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-</div>
-</td>
+  <td>
+  <ul id="playlist">
+    <li class="image"><a href="samplemusic.mp3"><img src="music.webp" alt="Denim Jeans" style="width:50%"></a></li>
+    <li class="image"><a href="samplemusic.mp3"><img src="music.webp" alt="Denim Jeans" style="width:50%"></a></li>
+    <li class="image"><a href="samplemusic.mp3"><img src="music.webp" alt="Denim Jeans" style="width:50%"></a></li>
+    <li class="image"><a href="samplemusic.mp3"><img src="music.webp" alt="Denim Jeans" style="width:50%"></a></li>        
+  </ul>
+  </td>      
 </tr>
-<tr>
-<td><div>
-  <video width="420" height="315" controls>
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).mp4" type="video/mp4">
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-</div></td>
-<td><div>
-  <video width="420" height="315" controls>
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).mp4" type="video/mp4">
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-</div></td>
-<td><div>
-  <video width="420" height="315" controls>
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).mp4" type="video/mp4">
-  <source src="Shayad (Love Aaj Kal) 1080p HD-(BigMusic).ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-</div></td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-</tr>
+
 </table>
+<audio controls class="audio1" id="audioPlayer">
+Your browser does not support the audio element.
+</audio>
+<script src="https:code.jquery.com/jquery-2.2.0.js"></script>
+<script>
+  audioPlayer();
+  function audioPlayer(){
+    var currentSong = 0;
+    $("#audioPlayer")[0].src = $("#playlist li a")[0];
+    $("#audioPlayer")[0].play();
+    $("#playlist li a").click(function(e){
+       e.preventDefault(); 
+       $("#audioPlayer")[0].src = this;
+       $("#audioPlayer")[0].play();
+    });
+    
+    $("#audioPlayer")[0].addEventListener("ended", function(){
+       currentSong++;
+        if(currentSong == $("#playlist li a").length)
+            currentSong = 0;
+        $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+        $("#audioPlayer")[0].play();
+    });
+}
+
+</script>
 </body>
 </html>
