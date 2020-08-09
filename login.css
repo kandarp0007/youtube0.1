@@ -1,3 +1,4 @@
+
 input[type=text], 
     input[type=password] { 
         width: 100%; 
@@ -32,7 +33,7 @@ input[type=text],
         margin:50px 50px 50px 50px;
     }
     .container{
-        background-color: floralwhite;
+        background-color: mediumturquoise;
         height:400px;
         width:400px;
         margin-top: 100px;
@@ -64,5 +65,5 @@ input[type=text],
       }
       
 body{
-    background: url(loginbackground.jpg);
+    background-image:url(loginimg.jpg);
 }      

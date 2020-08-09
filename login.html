@@ -2,6 +2,8 @@
     <head>
         <link rel="stylesheet" href="bootstrap.min.css">
         <link rel="stylesheet" href="login.css">
+        <script src="login.js"></script>
+
     </head>
 <body style="background-color:#566573"> 
     <nav class="navbar navbar-light bg-light">
@@ -12,26 +14,26 @@
         <div class="topnav">
             <a href="login.html">LOGIN</a> 
             <a href="/css/">REGISTER</a> 
-            <a href="/js/">ABOUT US</a> 
-            <a href="/python/">CONTACT US</a>
+            <a href="music.html">MUSIC</a> 
+            <a href="/python/">VEDIO</a>
         </div>
     </nav>
-    <form action="music.html">
+    <form method="POST">
         <div class="container">
             <table class="table_body">
                 <tbody align="center">
                 <tr>
                     <td><label><b>Username</b></label> </td>
-                    <td><input type="text" placeholder="Enter Username" name="uname" required> 
+                    <td><input type="text" placeholder="Enter Username" name="uname" id="uname" required> 
                     </td>
                 </tr>
                 <tr>
                     <td><label><b>Password</b></label> </td>
-                    <td><input type="password" placeholder="Enter Password" name="psw" required> </td>
+                    <td><input type="password" placeholder="Enter Password" name="psw" id="psw" required> </td>
                 </tr>
                 <tr>
                     <td>
-                    <button type="submit">Login</button>
+                    <button type="submit" onclick="validate()">Login</button>
                     </td>
                     <td>
                         <button type="button" class="cancelbtn">Cancel</button>
