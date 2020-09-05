@@ -2,11 +2,17 @@ body{
 	background-color: rgb(0, 10, 0);
 }
 
-.topnav {
+#topnav {
 	overflow: hidden;
+	position: fixed; /* Set the navbar to fixed position */
+	top: 0; /* Position the navbar at the top of the page */
+	width: 100%;
+	z-index: 2;
+	margin-bottom: 50px;
+	
   }
   
-.topnav a {
+#topnav a {
 	float: left;
 	margin:0px 100px 0px 0px;
 	color: #0c0c0c;
@@ -14,30 +20,54 @@ body{
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: 17px;
+	position: sticky;
   }
   
-.topnav a:hover {
+#topnav a:hover {
 	background-color: rgb(170, 168, 168);
 	color: black;
   }
   
-.topnav a.active {
+#topnav a.active {
 	background-color: #4CAF50;
 	color: white;
   }
 
- 
+/* Page content */
+.content {
+	padding: 16px;
+	margin-top: 50px;
+	height: auto;
+  } 
+
 
 .audio1{
 	width: 100%;
-	background-color: rgb(229, 233, 225);
+	background-color: crimson;
+	
 	
 }
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
+  }
 
 .image{
 	width: 200px;
 	height: 200px;
-	margin: 20px 50px 20px 50px;
+	bottom: 0;
+	width: 100%;
+	z-index: 1;
 }
 
+.card{
+	background-color: crimson;
+    color: black;
+}
+.card a:hover{
+	opacity: 0.6;
+}
 
